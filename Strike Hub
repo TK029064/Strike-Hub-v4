@@ -1,0 +1,20 @@
+local CoreGui = game:GetService("StarterGui") 
+CoreGui:SetCore("SendNotification", {
+ Title = "Welcome to Strike Hub",
+ Text = "Script loading",
+Duration = 5;
+})
+if not game:IsLoaded() then
+    repeat wait() until game:IsLoaded()
+end
+if game.PlaceId == 9522149469 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/oceanhong970201/robloxscript/main/Loader.txt", true))()
+elseif game.PlaceId == 6284583030 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BLACKGAMER1221/Pet-Simulator-X/main/BK%20Pet.lua"))()
+elseif game.PlaceId == 3527629287 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/radjahfromdiscord/iNEXT/main/source"))()
+elseif game.PlaceId == 6872265039 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
+else
+    game.Players.LocalPlayer:Kick("Game Not Supported")
+end
